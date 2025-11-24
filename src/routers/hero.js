@@ -121,6 +121,11 @@ router.get('/heroes/:id', async (req, res) => {
     res.render("contacto.ejs")
   })
 
+    // Route for Contacto.
+  router.get('/comentarios', async (req, res) => {
+    res.render("comentarios.ejs")
+  })
+
   // Maintenance Page
 router.get('/mantenimiento', async (req, res) => {
   res.render("mantenimiento.ejs")
