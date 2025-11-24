@@ -78,12 +78,8 @@
   }
 
   .submitform{
-    padding: 8px;
-    padding-bottom: 7px;
-    font-size: 18px;
-    display: block;
-    width: 40%;
-    font-weight: 400;
+    padding: 15px;
+    font-size: 22px;
     resize: none;
     background-color: rgb(114, 179, 184);
     border-radius: 9px;
