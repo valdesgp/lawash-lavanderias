@@ -1012,7 +1012,6 @@ body {
 
 .glass-nav-d {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 70%, rgb(91, 141, 144) 100%);
-
   background-size: cover; /* Ensure the image covers the whole container */
   background-repeat: no-repeat; /* Prevent the image from repeating */
   background-position: center top; /* Centers horizontally and aligns bottom */
