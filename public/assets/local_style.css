@@ -70,25 +70,26 @@
   .share-btn:active {
     color: #e2e2e2;
   }
+
   
-  form {
-    max-width: 600px;
-    text-align: center;
-    margin: 20px auto;
-  }
 
-  .submitform{
-    padding: 15px;
-    font-size: 22px;
-    resize: none;
-    background-color: rgb(114, 179, 184);
-    border-radius: 9px;
-    color: white;
-  }
-  .submitform:hover {
-    background-color: rgb(91, 149, 153);
+.submitform {
+  padding: 22px 28px;
+  font-size: 26px;
+  font-weight: 600;
+  background-color: rgb(114, 179, 184);
+  border-radius: 12px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
 
-  }
+.submitform:hover {
+  background-color: rgb(91, 149, 153);
+  transform: translateY(-1px);
+}
+
    
    input, textarea {
       padding: 1em;
