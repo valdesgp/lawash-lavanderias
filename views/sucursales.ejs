@@ -2,11 +2,7 @@
 
 <body oncontextmenu="return false;" class="relative overflow-x-hidden">
 
-    <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="cZYg02cO"></script>
-
-
-    <!-- SVG Background -->
+<!-- SVG Background -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="absolute top-0 left-0 w-full h-full">
     <circle cx="95" cy="50" r="3" fill="#d2d3db" opacity="0.75" />       <!-- Partially off-screen -->
     <circle cx="56" cy="86" r="4" fill="#d2d3db" opacity="0.75" />
@@ -39,20 +35,21 @@
     <circle cx="86" cy="79" r="6" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
 </svg>
 
-      
+<!-- MC -->
+<div>
 
-    <div>
-        <div class="relative z-10"> <!-- Ensure content is above the SVG -->
-            <!-- NAVBAR -->
-            <%- include('navbar.ejs') %> 
+<div class="relative z-10"> <!-- Ensure content is above the SVG -->
+
+<!-- NAVBAR -->
+<%- include('navbar.ejs') %> 
     
-            <!--HEADER (Path)-->
-            <div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
-                <div class="flex ml-3 mt-3 lg:mt-3 md:mt-24 sm:mt-24 items-center">
-                    <div class="mt-0 lg:mt-0 md:mt-2 sm:mt-2">
-                    </div>
-                </div>
-            </div>
+<!--HEADER (Path)-->
+<div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
+  <div class="flex ml-3 mt-3 lg:mt-3 md:mt-24 sm:mt-24 items-center">
+    <div class="mt-0 lg:mt-0 md:mt-2 sm:mt-2">
+    </div>
+  </div>
+</div>
 
 <!-- First Slideshow Container -->
 <div class="slideshow-container block sm:hidden md:hidden lg:block mt-8">
@@ -131,7 +128,7 @@
   <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
     <!-- Main content // ABOUT -->
 
-    <div class="w-2/3 mt-20 lg:w-2/3 sm:w-full md:w-full">
+    <div class="w-2/3 mt-20 lg:pr-40 lg:-mr-20 lg:ml-20 lg:w-3/5 sm:w-full md:w-full">
         <!-- Mobile -->
         <div class="relative hidden sm:block md:block lg:hidden mt-6 mb-3">
             <div class="banner">
@@ -214,7 +211,7 @@
         </div>
     </div>
 
-    <div class="w-1/2 md:w-full lg:w-1/2 -ml-24 sm:w-full mt-12 sm:mt-1 md:mt-1 lg:mt-12 block sm:hidden md:hidden lg:block">
+    <div class="w-2/4 -ml-24 mt-12 block sm:hidden md:hidden lg:block">
         <img
             class="h-auto rounded-3xl transform rotate-6"
             src="/public/images/lawash-sucursal-1.jpg"
@@ -236,7 +233,12 @@
   <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
     <!-- Main content // ABOUT -->
 
-    <div class="w-2/3 mt-10 lg:w-2/3 sm:w-full md:w-full">
+    <div class="w-full mt-12 block mr-20 sm:hidden md:hidden lg:block">
+        <img
+            class="h-auto rounded-3xl transform -rotate-6" src="/public/images/lawash-sucursal-2.jpg" alt="Fachada Sucursal Apatlaco">
+    </div>
+
+    <div class="mt-10 ml-0 w-full">
         <!-- Mobile -->
         <div class="relative hidden sm:block md:block lg:hidden mt-6 mb-3">
             <div class="banner">
@@ -244,7 +246,7 @@
                     class="inset-0 w-full rounded-3xl h-full"
                     loading="lazy"
                     src="/public/images/lawash-sucursal-2.jpg"
-                    alt="Top Background Image"
+                    alt="Fachada Sucursal Apatlaco"
                 >
             </div>
         </div>
@@ -319,13 +321,6 @@
         </div>
     </div>
 
-    <div class="w-1/2 md:w-full lg:w-1/2 -ml-24 sm:w-full mt-12 sm:mt-1 md:mt-1 lg:mt-12 block sm:hidden md:hidden lg:block">
-        <img
-            class="h-auto rounded-3xl transform -rotate-6"
-            src="/public/images/lawash-sucursal-2.jpg"
-            alt="Background Image"
-        >
-    </div>
 </div>
 </div>    
 
@@ -401,12 +396,13 @@
   
 <!--Footer (Path) -->
   <%- include('footer.ejs') %>
-  </div>
 </div>
+</div>
+
 </body>
   
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-  <script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script>
 
 
 
@@ -501,4 +497,4 @@
     autoSlide();
     
     
-    </script>
+</script>
