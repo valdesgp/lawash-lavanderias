@@ -1,5 +1,10 @@
 <%- include('head.ejs') %>
 
+<body oncontextmenu="return false;" class="relative overflow-x-hidden">
+
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v20.0" nonce="cZYg02cO"></script>
+
 
     <!-- SVG Background -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="absolute top-0 left-0 w-full h-full">
@@ -34,22 +39,22 @@
     <circle cx="86" cy="79" r="6" fill="#d2d3db" opacity="0.75" />        <!-- Bigger and higher up -->
 </svg>
       
+
     <div>
         <div class="relative z-10"> <!-- Ensure content is above the SVG -->
             <!-- NAVBAR -->
             <%- include('navbar.ejs') %> 
     
             <!--HEADER (Path)-->
-            <div class="flex flex-col mt-20 lg:mt-20 md:mt-48 sm:mt-48 md:flex-row md:justify-between">
-                <div class="flex ml-3 mt-3 lg:mt-3 md:mt-24 sm:mt-24 items-center">
-                    <div class="mt-0 lg:mt-0 md:mt-2 sm:mt-2">
+            <div class="flex flex-col lg:mt-20 mt-64 md:flex-row md:justify-between">
+                <div class="flex ml-3 lg:mt-3 mt-24 items-center">
+                    <div class="mt-2 lg:mt-0 ">
                     </div>
                 </div>
             </div>
-            </div>
 
 <!-- First Slideshow Container -->
-<div class="slideshow-container block sm:hidden md:hidden lg:block mt-10">
+<div class="slideshow-container hidden lg:block mt-10">
     <!-- Slide 1 -->
     <div class="mySlides1">
         <div class="banner">
@@ -78,10 +83,15 @@
         </div>
     </div>
 
+    <!-- Next/Prev controls for first slideshow 
+    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+  -->
+    
 </div>
 
 <!-- First Slideshow Container     MOBILE -->
-<div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-32 hidden sm:block md:block lg:hidden">
+<div class="relative mt-64 md:mt-20 top-0 mb-32 block lg:hidden">
   
   <div class="banner">
     <img class="inset-0 w-full h-full opacity-0" src="/public/images/banner-mobile-3.jpg" alt="Top Background Image">
@@ -113,91 +123,53 @@
 </div>
 
     <!-- MC Servicios PrINCIPALES -->
-<div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 ">
+<div class="container -mt-1 mx-auto lg:p-0 p-2 md:p-0 ">
     
-  <p class="text-2xl text-gray-600 font-semibold italic text-left ml-44 mt-6 sm:text-5xl md:text-5xl">Servicios:</p>
+  <p class="lg:text-2xl text-gray-600 font-semibold italic text-left ml-44 mt-6 text-5xl">Servicios:</p>
  
     <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
 
         <!-- Main content // ABOUT -->
-        <div class="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8 font-semibold leading-tight">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8 font-semibold leading-tight">
 
             <!-- Icon 1 -->
             <div class="text-center mt-3">
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado/Secado Autoservicio</span></p>
+                <p class="text-4xl lg:text-3xl lg:ml-16 lg:mr-16 ml-0 mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado/Secado Autoservicio</span></p>
 
                 <img class="w-5/6 mx-auto icon-gray p-3 rounded-3xl" src="/public/images/lawash-icon-mc-autoservicio.png">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 text-gray-600 font-normal"> Lava y seca tu ropa tú mismo, fácil y rápido.</p>
+                <p class="text-4xl lg:text-3xl lg:ml-16 lg:mr-16 ml-0 mr-0 text-gray-600 font-normal"> Lava y seca tu ropa tú mismo, fácil y rápido.</p>
 
             </div>
             
             <!-- Icon 2 -->
             <div class="text-center mt-3"> 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-5 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado por Encargo</span></p>
-                <img class="w-5/6 mx-auto icon-gray p-3 rounded-3xl sm:mt-6 md:mt-6 mt-0 lg:mt-0" src="/public/images/lawash-icon-mc-porencargo.png">
+                <p class="text-4xl lg:text-3xl  lg:ml-16 lg:mr-16 ml-0 mr-0 mt-5 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado por Encargo</span></p>
+                <img class="w-5/6 mx-auto icon-gray p-3 rounded-3xl mt-6 lg:mt-0" src="/public/images/lawash-icon-mc-porencargo.png">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 mt-4 lg:mt-0 sm:mr-0 text-gray-600 font-normal"> Déjanos tu ropa y nosotros nos encargamos.</p>        
+                <p class="text-4xl lg:text-3xl  lg:ml-16 lg:mr-16 ml-0 mr-0 text-gray-600 font-normal"> Déjanos tu ropa y nosotros nos encargamos.</p>        
             </div>
           
             <!-- Icon 3 https://i.postimg.cc/rz6S6L94/image-2024-09-10-155403354.png https://i.postimg.cc/5y7MrwhC/image-2024-09-09-145351773.png  -->
             <div class="text-center mt-3">
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado Empresarial</span></p>
-                <img class="w-5/6 mx-auto icon-gray  p-3 rounded-3xl mt-0 sm:mt-4 md:mt-4 lg:mt-0" src="/public/images/lawash-icon-mc-empresarial.png">
+                <p class="text-4xl lg:text-3xl  lg:ml-16 lg:mr-16 ml-0 mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Lavado Empresarial</span></p>
+                <img class="w-5/6 mx-auto icon-gray  p-3 rounded-3xl mt-4 lg:mt-0" src="/public/images/lawash-icon-mc-empresarial.png">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 text-gray-600 font-normal"> Lavado para negocios, puntual y profesional.</p>
+                <p class="text-4xl lg:text-3xl lg:ml-16 lg:mr-16 ml-0 mr-0 text-gray-600 font-normal"> Lavado para negocios, puntual y profesional.</p>
             </div>
 
                         <!-- Icon 3 https://i.postimg.cc/rz6S6L94/image-2024-09-10-155403354.png https://i.postimg.cc/5y7MrwhC/image-2024-09-09-145351773.png  -->
             <div class="text-center mt-3">
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Servicio Tintorería</span></p>
+                <p class="text-4xl lg:text-3xl lg:ml-16 lg:mr-16 ml-0 mr-0 mt-6 text-gray-600 font-bold"><span class="whitespace-nowrap">Servicio Tintorería</span></p>
                 <img class="w-5/6 mx-auto icon-gray  p-3 rounded-3xl" src="/public/images/lawash-icon-mc-tintoreria.png">
 
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-4 lg:mt-0 text-gray-600 font-normal"> Cuidado experto para tu ropa más especial.</p>
+                <p class="text-4xl lg:text-3xl lg:ml-16 lg:mr-16 ml-0 mr-0 mt-4 lg:mt-0 text-gray-600 font-normal"> Cuidado experto para tu ropa más especial.</p>
             </div>
         </div>
     </div>
 </div>
 
-    <!-- MC Servicios Adicionales
-<div class="container lg:-mt-1 -mt-1 sm:-mt-1 md:-mt-1 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 ">
-    <div class="md:flex md:flex-col-reverse lg:flex-row items-center">
-        <div class="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 mt-8 font-semibold">
-
-          
-         
-            <div class="text-center mt-3">
-                <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/cafeteria-lawash-logo.png">
-                <img class="w-5/6 mb-7 mx-auto icon-gray p-3 rounded-3xl transform rotate-6" src="/public/images/lawash-stock-4.jpg">
-
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal"><span class="font-semibold">Autoservicio</span> Lava y seca tu ropa tú mismo, fácil y rápido.</p>
-
-            </div>
-            
-
-            <div class="text-center mt-3"> 
-                <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/cinewash-lawash-logo.png">
-                <img class="w-5/6 mb-7 mx-auto icon-gray p-3 rounded-3xl transform -rotate-6" src="/public/images/lawash-stock-2.jpg">
-
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal"><span class="font-semibold">Lavado por Encargo</span> Déjanos tu ropa, nosotros nos encargamos.</p>
-
-                
-            </div>
-          
-
-            <div class="text-center mt-3">
-                <img class="w-5/6 lg:w-5/6 sm:w-full md:w-5/6 mx-auto icon-gray" src="/public/images/productos-lawash-logo.png">
-                <img class="w-5/6 mb-7 mx-auto icon-gray  p-3 rounded-3xl transform rotate-6" src="/public/images/lawash-stock-3.jpg">
-
-                <p class="text-2xl lg:text-3xl sm:text-4xl md:text-4xl ml-16 mr-16 lg:ml-16 lg:mr-16 md:ml-0 md:mr-0 sm:ml-0 sm:mr-0 mt-6 text-gray-600 font-normal"><span class="font-semibold">Lavado Empresarial</span> Lavado para negocios, puntual y profesional.</p>
-                
-            </div>
-        </div>
-    </div>
-</div>
- -->
-
-<div class="block sm:hidden md:hidden lg:block slideshow-container mt-12 videoad-posfix">
+<div class="hidden lg:block slideshow-container mt-12 videoad-posfix">
   <video autoplay loop muted playsinline poster="fallback-image.jpg" style="width:100%; height:100%; object-fit:cover;">
     <source src="/public/Untitled Design (4).mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -205,7 +177,7 @@
 </div>
 
 <!-- Second Slideshow Container -->
-<div class="relative mt-10 lg:mt-10 md:mt-24 sm:mt-24 mb-12 block lg:block md:hidden sm:hidden">
+<div class="relative mt-10 lg:mt-10 md:mt-24 sm:mt-24 mb-12 hidden lg:block">
     <!-- Bottom Background Image -->
     <img class="absolute inset-0 w-full h-full object-cover" loading="lazy" src="/public/images/lawash-banner-base.png" alt="Bottom Background Image" style="z-index: 0;">
 
@@ -250,12 +222,11 @@
 </div>
 
 <!-- Second Slideshow Container     MOBILE -->
-<div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-12 hidden sm:block md:block lg:hidden">
+<div class="relative mt-10 lg:mt-10 md:mt-8 sm:mt-8 mb-12 block lg:hidden">
   <div class="banner">
     <img class="inset-0 w-full h-full" src="/public/images/banner-mobile-4.jpg" alt="Top Background Image">
   </div>
 </div>
-
 
 <div class="container mt-16 mx-auto p-0 lg:p-0 sm:p-2 md:p-0 ">
   <p class="text-2xl  text-gray-600 font-semibold italic text-left ml-44 mb-2 sm:text-5xl md:text-5xl">Reseñas de Nuestros Clientes:</p>
@@ -398,14 +369,14 @@
     </div>
 
 
-      <div  id="msg-btn"class="message-button sm:hidden md:hidden lg:block hidden">
+      <div  id="msg-btn"class="message-button lg:block hidden">
                   <button class="close-btn" onclick="this.parentElement.style.display='none'">✕</button>
         <a href="/promos"> <img class="" src="/public/images/banner-mobile-floating.png"> </a> 
       </div> 
 
 
 
-      <div  id="msg-btn"class="message-button-mob sm:block md:block lg:hidden hidden">
+      <div  id="msg-btn"class="message-button-mob block lg:hidden">
           <button class="close-btn-mob" onclick="this.parentElement.style.display='none'">✕</button>
            <a href="/promos"> <img class="" src="/public/images/banner-mobile-floating.png"> </a> 
       </div> 

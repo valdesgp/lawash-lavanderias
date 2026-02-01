@@ -987,8 +987,9 @@ body {
 
 .glass-nav-mobile{
   background: linear-gradient(to bottom, rgb(240, 242, 255) 0%, rgb(228, 229, 241) 70%, rgb(210, 211, 221) 100%);
-  padding-bottom: 140px;
+  padding-bottom: 120px;
   font-weight: 900;
+  margin-top: -15px;
 }
 
 .glass-nav-c {
@@ -1223,13 +1224,16 @@ body {
 }
 
 .logo-img-b-mobile{
-  width: 190px;
-  margin-top: 175px;
-  margin-left: 40px;
+  width: 120px;
+  min-width: 80px;
+  margin-top: 165px;
+  margin-left: 15px;
+
 }
 
 .logo-img-mobile{
-  width: 400px;
+  width: 250px;
+  min-width: 100px;
   margin-top: 140px;
   margin-left: 1px;
 }
@@ -1247,10 +1251,10 @@ body {
 
 .sidebar {
   background: linear-gradient(to bottom, rgb(114, 179, 184) 0%, rgb(106, 166, 171) 40%, rgb(91, 141, 144) 100%);
-  padding: 100px;
+  padding: 80px;
   z-index: 10;
   color: #ffffff;
-  width: 500px;
+  width: 400px;
   height: 100vh;
   position: fixed;
   top: 0;
